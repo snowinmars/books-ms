@@ -23,6 +23,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Base", "Tests.Base\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Architecture", "Tests.Architecture\Tests.Architecture.csproj", "{0EFB4A84-BBC8-492A-9226-F72F6CCC99D8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{8B635CC5-DEC9-4E2D-8423-83D44F060E00}"
+ProjectSection(SolutionItems) = preProject
+	Directory.Build.props = Directory.Build.props
+	Directory.Build.targets = Directory.Build.targets
+	Dockerfile = Dockerfile
+	Jenkinsfile = Jenkinsfile
+	NuGet.Config = NuGet.Config
+	README.md = README.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_configuration", "_configuration", "{EF310B83-C193-4B69-8382-081DA80A7E98}"
+ProjectSection(SolutionItems) = preProject
+	_configuration\build\dotnet\CommonAssemblyAttributes.cs = _configuration\build\dotnet\CommonAssemblyAttributes.cs
+	_configuration\build\dotnet\common.targets = _configuration\build\dotnet\common.targets
+	_configuration\build\dotnet\default.ruleset = _configuration\build\dotnet\default.ruleset
+	_configuration\build\dotnet\styleCop.targets = _configuration\build\dotnet\styleCop.targets
+	_configuration\build\python\build.deps = _configuration\build\python\build.deps
+	_configuration\build\variables\Debug\build-settings.json = _configuration\build\variables\Debug\build-settings.json
+	_configuration\runtime\varibales\Debug\connection-strings.json = _configuration\runtime\varibales\Debug\connection-strings.json
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_scripts", "_scripts", "{6DEFA4E3-B803-42F3-BE0D-5691EA0BCB97}"
+ProjectSection(SolutionItems) = preProject
+	_scripts\_dotnet.py = _scripts\_dotnet.py
+	_scripts\build.py = _scripts\build.py
+	_scripts\clean.py = _scripts\clean.py
+	_scripts\run.py = _scripts\run.py
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

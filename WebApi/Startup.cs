@@ -24,7 +24,7 @@ namespace EmptyService.WebApi
                             .AddJsonFile("appsettings.json")
                             .AddEnvironmentVariables()
                             .Build();
-            
+
             shouldStartJob = bool.Parse(Configuration.GetSection("JobSettings:ShouldStart").Value);
         }
 
