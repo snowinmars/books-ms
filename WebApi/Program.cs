@@ -6,8 +6,7 @@ using Serilog;
 
 namespace EmptyService.WebApi
 {
-    // ReSharper disable once AllowPublicClass
-    public class Program
+    internal class Program
     {
         public static void Main(string[] args)
         {

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using EmptyService.Logger.Abstractions;
+using EmptyService.WebApi.Controllers;
 using EmptyService.WebApi.Mapper;
 using EmptyService.WebApi.Models;
 using Logic.Abstractions;
@@ -10,19 +11,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmptyService.WebApi
 {
-    // ReSharper disable once AllowPublicClass
     [ApiController]
     [Route("api/[controller]")]
-    public class BooksController : ControllerBase
+    internal class BooksController : BaseController
     {
         public BooksController(ILog log,
-            IBookLogic logic)
+            IBookLogic logic) : base(log)
         {
-            this.log = log;
             this.logic = logic;
         }
-
-        private readonly ILog log;
 
         private readonly IBookLogic logic;
 

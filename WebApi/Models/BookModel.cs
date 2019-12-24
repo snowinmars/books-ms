@@ -2,8 +2,7 @@ using System;
 
 namespace EmptyService.WebApi.Models
 {
-    // ReSharper disable once AllowPublicClass
-    public class BookModel
+    internal class BookModel
     {
         public Guid Id { get; set; }
 

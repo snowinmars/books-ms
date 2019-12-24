@@ -5,6 +5,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using EmptyService.DependencyResolver;
 using EmptyService.Logger.Abstractions;
+using EmptyService.WebApi.Helpers;
 using Job;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,8 +16,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace EmptyService.WebApi
 {
-    // ReSharper disable once AllowPublicClass
-    public class Startup
+    internal class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -77,6 +77,7 @@ namespace EmptyService.WebApi
             app.UseEndpoints(x => x.MapControllers());
         }
 
+        // This method gets called by the runtime.
         public void ConfigureContainer(ContainerBuilder builder)
         {
             Resolver.Register(builder);
@@ -85,7 +86,10 @@ namespace EmptyService.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                    .ConfigureApplicationPartManager(x =>
+                                                         x.FeatureProviders
+                                                          .Add(new InternalControllerFeatureProvider()));
 
             if (shouldStartJob)
             {
