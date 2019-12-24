@@ -1,9 +1,9 @@
 using System;
 using System.Security;
-using EmptyService.CommonEntities;
-using EmptyService.Configuration.Abstractions;
+using BookService.CommonEntities;
+using BookService.Configuration.Abstractions;
 
-namespace EmptyService.Configuration
+namespace BookService.Configuration
 {
     internal class DatabaseConfig : IDatabaseConfig
     {

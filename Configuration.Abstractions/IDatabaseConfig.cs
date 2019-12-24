@@ -1,7 +1,7 @@
 using System;
 using System.Security;
 
-namespace EmptyService.Configuration.Abstractions
+namespace BookService.Configuration.Abstractions
 {
     public interface IDatabaseConfig
     {

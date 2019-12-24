@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace EmptyService.DependencyResolver.ConfigurationModels
+namespace BookService.DependencyResolver.ConfigurationModels
 {
     internal sealed class MainConfigModel
     {

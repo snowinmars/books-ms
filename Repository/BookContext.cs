@@ -1,5 +1,5 @@
-using EmptyService.CommonEntities;
-using EmptyService.Configuration.Abstractions;
+using BookService.CommonEntities;
+using BookService.Configuration.Abstractions;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;

@@ -1,4 +1,4 @@
-namespace EmptyService.CommonEntities.Pathes
+namespace BookService.CommonEntities.Pathes
 {
     public enum ActionOnNotFound
     {

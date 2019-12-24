@@ -1,7 +1,7 @@
-using EmptyService.WebApi.Models;
+using BookService.WebApi.Models;
 using Entities;
 
-namespace EmptyService.WebApi.Mapper
+namespace BookService.WebApi.Mapper
 {
     internal static class BookMapper
     {

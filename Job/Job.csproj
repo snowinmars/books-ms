@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Job</AssemblyName>
-        <RootNamespace>EmptyService.Job</RootNamespace>
+        <AssemblyName>BookService.Job</AssemblyName>
+        <RootNamespace>BookService.Job</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

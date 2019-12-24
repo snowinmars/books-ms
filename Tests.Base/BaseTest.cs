@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using SandS.Tests.Base.Settings;
 
-namespace EmptyService.Tests.Base
+namespace BookService.Tests.Base
 {
     internal abstract class BaseTest
     {

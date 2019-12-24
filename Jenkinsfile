@@ -16,7 +16,7 @@ stage("Build IMG") {
 
             sh """
                 echo $GIT_COMMIT_HASH
-                docker build --build-arg WATERMARK=${GIT_COMMIT_HASH} -t empty_microservice --no-cache .
+                docker build --build-arg WATERMARK=${GIT_COMMIT_HASH} -t book_microservice --no-cache .
             """
 }
     } catch (err){
@@ -30,7 +30,7 @@ stage("Push IMG"){
     node('master') {
       GIT_COMMIT_HASH=sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
 
-      docker.withRegistry("https://639061735319.dkr.ecr.eu-west-1.amazonaws.com/empty_microservice", "ecr:eu-west-1:ECR") {
+      docker.withRegistry("https://639061735319.dkr.ecr.eu-west-1.amazonaws.com/book_microservice", "ecr:eu-west-1:ECR") {
         docker.image("empty_microservice").push("latest")
         docker.image("empty_microservice").push("${GIT_COMMIT_HASH}")
       }

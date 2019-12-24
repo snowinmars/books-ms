@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.CommonEntities.Helpers
+namespace BookService.CommonEntities.Helpers
 {
     internal class AsyncFileHelper
     {

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Entities</AssemblyName>
-        <RootNamespace>EmptyService.Entities</RootNamespace>
+        <AssemblyName>BookService.Entities</AssemblyName>
+        <RootNamespace>BookService.Entities</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

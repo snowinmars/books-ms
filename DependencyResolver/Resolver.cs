@@ -4,14 +4,14 @@ using System.IO;
 using System.Linq;
 using Autofac;
 using Autofac.Core;
-using EmptyService.CommonEntities;
-using EmptyService.CommonEntities.Exceptions;
-using EmptyService.CommonEntities.Pathes;
-using EmptyService.Configuration;
-using EmptyService.Configuration.Abstractions;
-using EmptyService.DependencyResolver.ConfigurationModels;
-using EmptyService.Logger;
-using EmptyService.Logger.Abstractions;
+using BookService.CommonEntities;
+using BookService.CommonEntities.Exceptions;
+using BookService.CommonEntities.Pathes;
+using BookService.Configuration;
+using BookService.Configuration.Abstractions;
+using BookService.DependencyResolver.ConfigurationModels;
+using BookService.Logger;
+using BookService.Logger.Abstractions;
 using Logic;
 using Logic.Abstractions;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +22,7 @@ using Npgsql;
 using Repository;
 using Repository.Abstractions;
 
-namespace EmptyService.DependencyResolver
+namespace BookService.DependencyResolver
 {
     // ReSharper disable once AllowPublicClass
     public static class Resolver

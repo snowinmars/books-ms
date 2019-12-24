@@ -1,6 +1,6 @@
 using System;
 
-namespace EmptyService.WebApi.Models
+namespace BookService.WebApi.Models
 {
     internal class BookModel
     {

@@ -1,8 +1,8 @@
 using System.Reflection;
-using EmptyService.WebApi.Controllers;
+using BookService.WebApi.Controllers;
 using Microsoft.AspNetCore.Mvc.Controllers;
 
-namespace EmptyService.WebApi.Helpers
+namespace BookService.WebApi.Helpers
 {
     internal class InternalControllerFeatureProvider : ControllerFeatureProvider
     {

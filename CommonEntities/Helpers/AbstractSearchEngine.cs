@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace EmptyService.CommonEntities.Helpers
+namespace BookService.CommonEntities.Helpers
 {
     internal abstract class AbstractSearchEngine<T>
     {

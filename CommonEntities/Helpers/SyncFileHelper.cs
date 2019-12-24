@@ -3,9 +3,9 @@ using System.IO;
 using System.IO.Compression;
 using System.Net;
 using System.Text;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.CommonEntities.Helpers
+namespace BookService.CommonEntities.Helpers
 {
     internal class SyncFileHelper
     {

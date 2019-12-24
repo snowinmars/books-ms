@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Logger.Abstractions</AssemblyName>
-        <RootNamespace>EmptyService.Logger.Abstractions</RootNamespace>
+        <AssemblyName>BookService.Logger.Abstractions</AssemblyName>
+        <RootNamespace>BookService.Logger.Abstractions</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

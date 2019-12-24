@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Repository.Abstractions</AssemblyName>
-        <RootNamespace>EmptyService.Repository.Abstractions</RootNamespace>
+        <AssemblyName>BookService.Repository.Abstractions</AssemblyName>
+        <RootNamespace>BookService.Repository.Abstractions</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

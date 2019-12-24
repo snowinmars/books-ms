@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace EmptyService.CommonEntities.Exceptions
+namespace BookService.CommonEntities.Exceptions
 {
     // ReSharper disable once AllowPublicClass
     public class NotFoundException : BusinessException

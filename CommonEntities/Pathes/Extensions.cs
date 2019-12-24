@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace EmptyService.CommonEntities.Pathes
+namespace BookService.CommonEntities.Pathes
 {
     // ReSharper disable once AllowPublicClass
     public static class Extensions

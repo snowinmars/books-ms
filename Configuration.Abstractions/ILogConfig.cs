@@ -1,6 +1,6 @@
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.Configuration.Abstractions
+namespace BookService.Configuration.Abstractions
 {
     public interface ILogConfig
     {

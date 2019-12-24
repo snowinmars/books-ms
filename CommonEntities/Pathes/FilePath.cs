@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace EmptyService.CommonEntities.Pathes
+namespace BookService.CommonEntities.Pathes
 {
     // ReSharper disable once AllowPublicClass
     public sealed class FilePath : AbsolutePath,

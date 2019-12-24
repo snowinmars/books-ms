@@ -1,4 +1,4 @@
-﻿namespace EmptyService.CommonEntities
+﻿namespace BookService.CommonEntities
 {
     public static class EmptyArray<T>
     {

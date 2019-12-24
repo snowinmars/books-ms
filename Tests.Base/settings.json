@@ -1,4 +1,4 @@
 {
-  "assembly-name-prefix": "EmptyService",
-  "namespace-prefix": "EmptyService"
+  "assembly-name-prefix": "BookService",
+  "namespace-prefix": "BookService"
 }

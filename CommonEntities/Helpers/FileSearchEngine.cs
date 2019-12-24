@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.CommonEntities.Helpers
+namespace BookService.CommonEntities.Helpers
 {
     internal sealed class FileSearchEngine : AbstractSearchEngine<FilePath>
     {

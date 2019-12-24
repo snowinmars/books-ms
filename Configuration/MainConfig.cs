@@ -1,6 +1,6 @@
-﻿using EmptyService.Configuration.Abstractions;
+﻿using BookService.Configuration.Abstractions;
 
-namespace EmptyService.Configuration
+namespace BookService.Configuration
 {
     internal class MainConfig : IMainConfig
     {

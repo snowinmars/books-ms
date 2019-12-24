@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Configuration</AssemblyName>
-        <RootNamespace>EmptyService.Configuration</RootNamespace>
+        <AssemblyName>BookService.Configuration</AssemblyName>
+        <RootNamespace>BookService.Configuration</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

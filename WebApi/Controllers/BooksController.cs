@@ -2,14 +2,14 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using EmptyService.Logger.Abstractions;
-using EmptyService.WebApi.Controllers;
-using EmptyService.WebApi.Mapper;
-using EmptyService.WebApi.Models;
+using BookService.Logger.Abstractions;
+using BookService.WebApi.Controllers;
+using BookService.WebApi.Mapper;
+using BookService.WebApi.Models;
 using Logic.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EmptyService.WebApi
+namespace BookService.WebApi
 {
     [ApiController]
     [Route("api/[controller]")]

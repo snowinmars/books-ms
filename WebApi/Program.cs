@@ -1,10 +1,10 @@
 using Autofac.Extensions.DependencyInjection;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace EmptyService.WebApi
+namespace BookService.WebApi
 {
     internal class Program
     {

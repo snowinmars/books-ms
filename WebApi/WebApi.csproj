@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
-        <AssemblyName>EmptyService.WebApi</AssemblyName>
-        <RootNamespace>EmptyService.WebApi</RootNamespace>
+        <AssemblyName>BookService.WebApi</AssemblyName>
+        <RootNamespace>BookService.WebApi</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

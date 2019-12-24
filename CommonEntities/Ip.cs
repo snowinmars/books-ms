@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 
-namespace EmptyService.CommonEntities
+namespace BookService.CommonEntities
 {
     public struct Ip : IComparable,
                        IComparable<Ip>,

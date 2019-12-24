@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EmptyService.CommonEntities
+namespace BookService.CommonEntities
 {
     // ReSharper disable once AllowPublicClass
     public static class CommonValues

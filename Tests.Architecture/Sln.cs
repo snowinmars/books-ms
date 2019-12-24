@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using EmptyService.CommonEntities.Pathes;
-using EmptyService.Tests.Base;
+using BookService.CommonEntities.Pathes;
+using BookService.Tests.Base;
 using NUnit.Framework;
 
-namespace EmptyService.Tests.Architecture
+namespace BookService.Tests.Architecture
 {
     internal sealed class Sln : BaseTest
     {

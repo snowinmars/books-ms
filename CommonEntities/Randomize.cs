@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace EmptyService.CommonEntities
+namespace BookService.CommonEntities
 {
     // ReSharper disable once AllowPublicClass
     public static class Randomize

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using EmptyService.CommonEntities.Exceptions;
+using BookService.CommonEntities.Exceptions;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using Repository.Abstractions;

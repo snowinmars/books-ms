@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Logger</AssemblyName>
-        <RootNamespace>EmptyService.Logger</RootNamespace>
+        <AssemblyName>BookService.Logger</AssemblyName>
+        <RootNamespace>BookService.Logger</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

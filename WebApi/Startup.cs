@@ -3,9 +3,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using EmptyService.DependencyResolver;
-using EmptyService.Logger.Abstractions;
-using EmptyService.WebApi.Helpers;
+using BookService.DependencyResolver;
+using BookService.Logger.Abstractions;
+using BookService.WebApi.Helpers;
 using Job;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,7 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace EmptyService.WebApi
+namespace BookService.WebApi
 {
     internal class Startup
     {

@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Repository</AssemblyName>
-        <RootNamespace>EmptyService.Repository</RootNamespace>
+        <AssemblyName>BookService.Repository</AssemblyName>
+        <RootNamespace>BookService.Repository</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

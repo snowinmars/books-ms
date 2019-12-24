@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.Logger.Abstractions
+namespace BookService.Logger.Abstractions
 {
     public interface ILog
     {

@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
 using System.Xml;
-using EmptyService.CommonEntities.Exceptions;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Exceptions;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.CommonEntities
+namespace BookService.CommonEntities
 {
     // ReSharper disable once AllowPublicClass
     public static class Extensions

@@ -3,8 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.0</TargetFramework>
         <IsPackable>false</IsPackable>
-        <RootNamespace>EmptyService.Tests.Base</RootNamespace>
-        <AssemblyName>EmptyService.Tests.Base</AssemblyName>
+        <RootNamespace>BookService.Tests.Base</RootNamespace>
+        <AssemblyName>BookService.Tests.Base</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>

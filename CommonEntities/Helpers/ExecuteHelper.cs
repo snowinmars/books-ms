@@ -1,9 +1,9 @@
 using System;
 using System.Diagnostics;
 using System.Linq;
-using EmptyService.CommonEntities.Pathes;
+using BookService.CommonEntities.Pathes;
 
-namespace EmptyService.CommonEntities.Helpers
+namespace BookService.CommonEntities.Helpers
 {
     // ReSharper disable once AllowPublicClass
     public static class ExecuteHelper

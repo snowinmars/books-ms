@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using EmptyService.CommonEntities.Pathes;
-using EmptyService.Tests.Base;
+using BookService.CommonEntities.Pathes;
+using BookService.Tests.Base;
 using NUnit.Framework;
 using SandS.Tests.Base.Settings;
 
-namespace EmptyService.Tests.Architecture
+namespace BookService.Tests.Architecture
 {
     internal sealed class CsProj : BaseTest
     {

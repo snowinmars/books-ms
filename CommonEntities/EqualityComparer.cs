@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EmptyService.CommonEntities
+namespace BookService.CommonEntities
 {
     // ReSharper disable once AllowPublicClass
     public sealed class GenericEqualityComparer<TItem, TProperty>

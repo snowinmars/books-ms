@@ -3,10 +3,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using EmptyService.CommonEntities.Helpers;
+using BookService.CommonEntities.Helpers;
 using Newtonsoft.Json;
 
-namespace EmptyService.CommonEntities.Pathes
+namespace BookService.CommonEntities.Pathes
 {
     // ReSharper disable once AllowPublicClass
     public sealed class DirectoryPath : AbsolutePath,

@@ -19,7 +19,7 @@
         <Version>$(AssemblyVersion)</Version>
         <Authors>TalkRemit</Authors>
         <Company>TalkRemit</Company>
-        <Product>Empty-Service-$(Watermark)</Product>
+        <Product>Book-Service-$(Watermark)</Product>
         <AssemblyVersion>$(AssemblyVersion)</AssemblyVersion>
         <FileVersion>$(AssemblyVersion)</FileVersion>
         <NeutralLanguage>en</NeutralLanguage>

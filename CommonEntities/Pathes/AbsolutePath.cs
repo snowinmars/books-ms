@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-namespace EmptyService.CommonEntities.Pathes
+namespace BookService.CommonEntities.Pathes
 {
     // ReSharper disable once AllowPublicClass
     public abstract class AbsolutePath : IComparable,

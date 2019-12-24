@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using EmptyService.CommonEntities.Pathes;
-using EmptyService.Logger.Abstractions;
+using BookService.CommonEntities.Pathes;
+using BookService.Logger.Abstractions;
 using Serilog;
 using Serilog.Debugging;
 using Serilog.Events;
 
-namespace EmptyService.Logger
+namespace BookService.Logger
 {
     internal sealed class Log : ILog
     {

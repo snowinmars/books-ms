@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.Logic</AssemblyName>
-        <RootNamespace>EmptyService.Logic</RootNamespace>
+        <AssemblyName>BookService.Logic</AssemblyName>
+        <RootNamespace>BookService.Logic</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

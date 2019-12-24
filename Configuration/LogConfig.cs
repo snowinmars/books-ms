@@ -1,7 +1,7 @@
-using EmptyService.CommonEntities.Pathes;
-using EmptyService.Configuration.Abstractions;
+using BookService.CommonEntities.Pathes;
+using BookService.Configuration.Abstractions;
 
-namespace EmptyService.Configuration
+namespace BookService.Configuration
 {
     internal sealed class LogConfig : ILogConfig
     {

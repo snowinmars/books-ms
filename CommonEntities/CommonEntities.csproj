@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.CommonEntities</AssemblyName>
-        <RootNamespace>EmptyService.CommonEntities</RootNamespace>
+        <AssemblyName>BookService.CommonEntities</AssemblyName>
+        <RootNamespace>BookService.CommonEntities</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

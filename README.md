@@ -1,11 +1,11 @@
-# empty-service
+# Book-Service
 
 This service is a template. Copypaste it wherever you need.
 
 ## Usage
 
 Build it into docker container:
-- `docker build --build-arg WATERMARK=MyCustomString -t empty_service --no-cache .`
+- `docker build --build-arg WATERMARK=MyCustomString -t book_service --no-cache .`
 
 Or build it locally, see the `_scripts` paragraph.
 
@@ -81,6 +81,6 @@ Contains scripts to build and run the service.
 Pathes below are solution related:
 - Build - `python _scripts/build.py --config_file '_configuration/build/variables/Debug/build-settings.json' --watermark 'MyCustomString'`
     The watermark will be hardcoded into dll description and product name
-- Run - `python _scripts/run.py --file _output/EmptyService.WebApi.dll` 
+- Run - `python _scripts/run.py --file _output/BookService.WebApi.dll` 
 - Clean `python _scripts/clean.py`
 

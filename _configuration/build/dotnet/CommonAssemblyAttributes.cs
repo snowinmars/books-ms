@@ -1,5 +1,5 @@
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("EmptyService.DependencyResolver")]
-[assembly: InternalsVisibleTo("EmptyService.Tests.Architecture")]
-[assembly: InternalsVisibleTo("EmptyService.Tests.Base")]
+[assembly: InternalsVisibleTo("BookService.DependencyResolver")]
+[assembly: InternalsVisibleTo("BookService.Tests.Architecture")]
+[assembly: InternalsVisibleTo("BookService.Tests.Base")]

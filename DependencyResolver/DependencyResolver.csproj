@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>EmptyService.DependencyResolver</AssemblyName>
-        <RootNamespace>EmptyService.DependencyResolver</RootNamespace>
+        <AssemblyName>BookService.DependencyResolver</AssemblyName>
+        <RootNamespace>BookService.DependencyResolver</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

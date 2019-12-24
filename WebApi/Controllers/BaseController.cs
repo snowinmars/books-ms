@@ -1,7 +1,7 @@
-using EmptyService.Logger.Abstractions;
+using BookService.Logger.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EmptyService.WebApi.Controllers
+namespace BookService.WebApi.Controllers
 {
     internal abstract class BaseController : ControllerBase
     {
