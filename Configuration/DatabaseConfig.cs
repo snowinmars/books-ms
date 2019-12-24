@@ -7,7 +7,7 @@ namespace EmptyService.Configuration
 {
     internal class DatabaseConfig : IDatabaseConfig
     {
-        public DatabaseConfig(Uri host, int port, string username, string password, string databaseName)
+        public DatabaseConfig(string host, int port, string username, string password, string databaseName)
         {
             Host = host;
             Port = port;
@@ -16,7 +16,7 @@ namespace EmptyService.Configuration
             DatabaseName = databaseName.ToSecureString();
         }
 
-        public Uri Host { get; }
+        public string Host { get; }
 
         public int Port { get; }
 

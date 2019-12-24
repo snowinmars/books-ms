@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
         <AssemblyName>EmptyService.Configuration.Abstractions</AssemblyName>
         <RootNamespace>EmptyService.Configuration.Abstractions</RootNamespace>
     </PropertyGroup>

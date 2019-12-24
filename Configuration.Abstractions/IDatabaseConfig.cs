@@ -5,7 +5,7 @@ namespace EmptyService.Configuration.Abstractions
 {
     public interface IDatabaseConfig
     {
-        Uri Host { get; }
+        string Host { get; }
 
         int Port { get; }
 

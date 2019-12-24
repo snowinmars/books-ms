@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
         <AssemblyName>EmptyService.DependencyResolver</AssemblyName>
         <RootNamespace>EmptyService.DependencyResolver</RootNamespace>
     </PropertyGroup>
@@ -14,12 +13,20 @@
       <ProjectReference Include="..\Configuration\Configuration.csproj" />
       <ProjectReference Include="..\Logger.Abstractions\Logger.Abstractions.csproj" />
       <ProjectReference Include="..\Logger\Logger.csproj" />
+      <ProjectReference Include="..\Logic\Logic.csproj" />
+      <ProjectReference Include="..\Repository\Repository.csproj" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Include="..\_configuration\build\dotnet\CommonAssemblyAttributes.cs">
         <Link>AssemblyInfo\CommonAssemblyAttributes.cs</Link>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Autofac, Version=4.9.4.0, Culture=neutral, PublicKeyToken=17863af14b0044da">
+        <HintPath>..\packages\autofac\4.9.4\lib\netstandard2.0\Autofac.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

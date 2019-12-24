@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyName>EmptyService.Entities</AssemblyName>
+        <RootNamespace>EmptyService.Entities</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Include="..\_configuration\build\dotnet\CommonAssemblyAttributes.cs">
+        <Link>AssemblyInfo\CommonAssemblyAttributes.cs</Link>
+      </Compile>
+    </ItemGroup>
+
+</Project>

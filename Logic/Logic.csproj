@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyName>EmptyService.Logic</AssemblyName>
+        <RootNamespace>EmptyService.Logic</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Logic.Abstractions\Logic.Abstractions.csproj" />
+      <ProjectReference Include="..\Repository.Abstractions\Repository.Abstractions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="..\_configuration\build\dotnet\CommonAssemblyAttributes.cs">
+        <Link>AssemblyInfo\CommonAssemblyAttributes.cs</Link>
+      </Compile>
+    </ItemGroup>
+
+</Project>

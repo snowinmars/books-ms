@@ -18,6 +18,7 @@ namespace EmptyService.WebApi
         {
             return Host.CreateDefaultBuilder(args)
                        .ConfigureWebHostDefaults(x => x.UseStartup<Startup>()
+                                                       .UseKestrel()
                                                        .UseContentRoot(DirectoryPath.Current))
                        .UseServiceProviderFactory(new AutofacServiceProviderFactory())
                        .UseSerilog();

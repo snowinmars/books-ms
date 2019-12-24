@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Autofac;
 using Autofac.Core;
+using EmptyService.CommonEntities;
 using EmptyService.CommonEntities.Exceptions;
 using EmptyService.CommonEntities.Pathes;
 using EmptyService.Configuration;
@@ -10,7 +12,15 @@ using EmptyService.Configuration.Abstractions;
 using EmptyService.DependencyResolver.ConfigurationModels;
 using EmptyService.Logger;
 using EmptyService.Logger.Abstractions;
+using Logic;
+using Logic.Abstractions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Npgsql;
+using Repository;
+using Repository.Abstractions;
 
 namespace EmptyService.DependencyResolver
 {
@@ -40,6 +50,32 @@ namespace EmptyService.DependencyResolver
             BuildContainer(builder, logger, config);
         }
 
+        public static void RegisterContext<TContext>(ContainerBuilder builder, string connectionString)
+            where TContext : DbContext
+        {
+            builder.Register(componentContext =>
+                   {
+                       var serviceProvider = componentContext.Resolve<IServiceProvider>();
+                       var dbContextOptions = new DbContextOptions<TContext>(new Dictionary<Type, IDbContextOptionsExtension>());
+                       var optionsBuilder = new DbContextOptionsBuilder<TContext>(dbContextOptions)
+                                            .UseApplicationServiceProvider(serviceProvider)
+                                            .UseNpgsql(connectionString,
+                                                          serverOptions => serverOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(30), null));
+
+                       return optionsBuilder.Options;
+                   }).As<DbContextOptions<TContext>>()
+                   .InstancePerLifetimeScope();
+
+            builder.Register(context => context.Resolve<DbContextOptions<TContext>>())
+                   .As<DbContextOptions>()
+                   .InstancePerLifetimeScope();
+
+            builder.RegisterType<TContext>()
+                   .AsSelf()
+                   .InstancePerLifetimeScope();
+        }
+
+
         private static void BuildContainer(ContainerBuilder builder, ILog log, IMainConfig config)
         {
             builder.RegisterInstance(log).As<ILog>().SingleInstance();
@@ -47,11 +83,36 @@ namespace EmptyService.DependencyResolver
             builder.RegisterInstance(config).As<IMainConfig>().SingleInstance();
             builder.RegisterInstance(config.MyDatabase).As<IDatabaseConfig>().SingleInstance();
             builder.RegisterInstance(config.Log).As<ILogConfig>().SingleInstance();
+            builder.RegisterType<BookRepository>().As<IBookRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<BookLogic>().As<IBookLogic>().InstancePerLifetimeScope();
+
+            var connectionString = new NpgsqlConnectionStringBuilder()
+            {
+                Host = config.MyDatabase.Host,
+                Port = config.MyDatabase.Port,
+                Username = config.MyDatabase.Username.ToUnsecureString(),
+                Password = config.MyDatabase.Password.ToUnsecureString(),
+                Database = config.MyDatabase.DatabaseName.ToUnsecureString(),
+            }.ConnectionString;
+
+            RegisterContext<BookContext>(builder, connectionString);
         }
 
         public static void Validate(ILifetimeScope container, ILog log)
         {
             ValidateResolvingSchema(container, log);
+
+            var bookContext = container.Resolve<BookContext>();
+
+            if (bookContext.Database.CanConnect())
+            {
+                log.Information($"Connected book database using {bookContext.Database.GetDbConnection().ConnectionString}");
+            }
+            else
+            {
+                throw new
+                    InvalidOperationException($"Can't connect to the book database using '{bookContext.Database.GetDbConnection().ConnectionString}'");
+            }
         }
 
         private static void ValidateResolvingSchema(ILifetimeScope container, ILog log)
@@ -84,7 +145,7 @@ namespace EmptyService.DependencyResolver
             }
             catch (Exception e)
             {
-                throw new InitializationException("Can't read configuration entity", e);
+                throw new InitializationException($"Can't read configuration entity: {e.Message}", e);
             }
 
             ILog log;
@@ -118,7 +179,7 @@ namespace EmptyService.DependencyResolver
 
         private static MainConfig ToMainConfig(this MainConfigModel model, DirectoryPath currentDirectory)
         {
-            var myDatabase = new DatabaseConfig(new Uri(model.MyDatabase.Host),
+            var myDatabase = new DatabaseConfig(model.MyDatabase.Host,
                                                 (int)uint.Parse(model.MyDatabase.Port),
                                                 model.MyDatabase.Username,
                                                 model.MyDatabase.Password,

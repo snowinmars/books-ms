@@ -8,6 +8,7 @@ using EmptyService.Logger.Abstractions;
 using Job;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -64,6 +65,8 @@ namespace EmptyService.WebApi
 
             var logger = app.ApplicationServices.GetAutofacRoot().Resolve<ILog>();
             Resolver.Validate(app.ApplicationServices.GetAutofacRoot(), logger);
+            var serverAddressesFeature = app.ServerFeatures.Get<IServerAddressesFeature>();
+            logger.Information($"Listening on {string.Join(", ", serverAddressesFeature.Addresses)}");
 
             app.UseCors(CorsPolicyName);
             app.UseHttpsRedirection();

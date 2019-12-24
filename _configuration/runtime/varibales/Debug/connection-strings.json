@@ -1,10 +1,10 @@
 {
 	"dbUsageName": {
-		"host": "https://ya.ru",
-		"port": 80,
-		"username": "user",
-		"password": "pwd",
-		"database-name": "mydb"
+		"host": "localhost",
+		"port": 5432,
+		"username": "homk",
+		"password": "No",
+		"database-name": "homk"
 	},
 	"log": {
 		"filepath": "_logs/main.log",
