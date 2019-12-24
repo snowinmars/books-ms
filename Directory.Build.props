@@ -17,8 +17,8 @@
 
     <PropertyGroup>
         <Version>$(AssemblyVersion)</Version>
-        <Authors>TalkRemit</Authors>
-        <Company>TalkRemit</Company>
+        <Authors>snowinmars</Authors>
+        <Company>snowinmars</Company>
         <Product>Book-Service-$(Watermark)</Product>
         <AssemblyVersion>$(AssemblyVersion)</AssemblyVersion>
         <FileVersion>$(AssemblyVersion)</FileVersion>
