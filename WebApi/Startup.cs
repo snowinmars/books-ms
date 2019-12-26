@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Serialization;
 
 namespace BookService.WebApi
 {
@@ -89,7 +90,8 @@ namespace BookService.WebApi
             services.AddControllers()
                     .ConfigureApplicationPartManager(x =>
                                                          x.FeatureProviders
-                                                          .Add(new InternalControllerFeatureProvider()));
+                                                          .Add(new InternalControllerFeatureProvider()))
+                    .AddNewtonsoftJson();
 
             if (shouldStartJob)
             {
