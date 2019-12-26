@@ -1,8 +1,8 @@
 {
-  "configuration": "Debug",
+  "configuration": "Release",
   "output": "_output",
   "resources": [
-    "_configuration/runtime/variables/Debug"
+    "_configuration/runtime/variables/Release"
   ],
   "solution_path": "BookService.sln",
   "assembly_version": "0.0.1.0"

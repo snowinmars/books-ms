@@ -1,0 +1,13 @@
+{
+	"dbUsageName": {
+		"host": "localhost",
+		"port": 5432,
+		"username": "homk",
+		"password": "No",
+		"database-name": "homk"
+	},
+	"log": {
+		"filepath": "_logs/main.log",
+		"level": "Debug"
+	}
+}
