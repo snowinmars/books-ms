@@ -11,6 +11,9 @@ namespace BookService.WebApi.Mapper
             {
                 Id = model.Id,
                 Title = model.Title,
+                Authors = model.Authors,
+                Isbn = model.Isbn,
+                Year = model.Year,
             };
         }
 
@@ -20,6 +23,9 @@ namespace BookService.WebApi.Mapper
             {
                 Id = book.Id,
                 Title = book.Title,
+                Authors = book.Authors,
+                Isbn = book.Isbn,
+                Year = book.Year,
             };
         }
     }

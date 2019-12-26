@@ -28,7 +28,7 @@ namespace BookService.WebApi
         {
             var item = await logic.GetAsync(id, token);
 
-            return Ok(item);
+            return Ok(item.ToBookModel());
         }
 
         [HttpPost]
@@ -38,7 +38,7 @@ namespace BookService.WebApi
 
             var freshItem = await logic.AddAsync(book, token);
 
-            return Ok(freshItem);
+            return Ok(freshItem.ToBookModel());
         }
 
         [HttpPost("{id}")]
@@ -54,7 +54,7 @@ namespace BookService.WebApi
 
             var updatedItem = await logic.UpdateAsync(freshBook, token);
 
-            return Ok(updatedItem);
+            return Ok(updatedItem.ToBookModel());
         }
 
         [HttpDelete("{id}")]
@@ -62,7 +62,7 @@ namespace BookService.WebApi
         {
             var item = await logic.DeleteAsync(id, token);
 
-            return Ok(item);
+            return Ok(item.ToBookModel());
         }
 
         [HttpGet("list")]

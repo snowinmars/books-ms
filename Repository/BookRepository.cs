@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BookService.CommonEntities.Exceptions;
 using Entities;
 using Microsoft.EntityFrameworkCore;
+using NodaTime;
 using Repository.Abstractions;
 
 namespace Repository
@@ -32,6 +33,7 @@ namespace Repository
 
         public async Task<Book> AddAsync(Book item, CancellationToken token = default)
         {
+            item.CreatedDate = SystemClock.Instance.GetCurrentInstant();
             var freshItem = await Books.AddAsync(item, token);
 
             return freshItem.Entity;

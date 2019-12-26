@@ -53,14 +53,21 @@ namespace BookService.DependencyResolver
         public static void RegisterContext<TContext>(ContainerBuilder builder, string connectionString)
             where TContext : DbContext
         {
+            NpgsqlConnection.GlobalTypeMapper.UseNodaTime();
+
             builder.Register(componentContext =>
                    {
                        var serviceProvider = componentContext.Resolve<IServiceProvider>();
                        var dbContextOptions = new DbContextOptions<TContext>(new Dictionary<Type, IDbContextOptionsExtension>());
+
                        var optionsBuilder = new DbContextOptionsBuilder<TContext>(dbContextOptions)
                                             .UseApplicationServiceProvider(serviceProvider)
                                             .UseNpgsql(connectionString,
-                                                          serverOptions => serverOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(30), null));
+                                                       serverOptions =>
+                                                           serverOptions.EnableRetryOnFailure(5,
+                                                                                              TimeSpan.FromSeconds(30),
+                                                                                              null));
+
 
                        return optionsBuilder.Options;
                    }).As<DbContextOptions<TContext>>()
